@@ -1,21 +1,20 @@
-NAME: SRIKARAN
-Roll no: 23010618
-# Experiment--02-Implementation-of-combinational-logic
-Implementation of combinational logic gates
- 
-## AIM:
+NAME:M.SRIKARAN
+
+Reference no: 23010618
+
+# Experiment02 Implementation of  combinational logic
+
+ ## AIM:
 To implement the given logic function verify its operation in Quartus using Verilog programming.
  F1= A’B’C’D’+AC’D’+B’CD’+A’BCD+BC’D
 ## Equipments Required:
-## Hardware – PCs, Cyclone II , USB flasher
-## Software – Quartus prime
+ Hardware – PCs, Cyclone II , USB flasher
+ Software – Quartus prime
 
 
 ## Theory
  A combinational circuit is a circuit in which the output depends on the present combination of inputs. Combinational circuits are made up of logic gates. The output of each logic gate is determined by its logic function. Combinational circuits can be made using various logic gates, such as AND gates, OR gates, and NOT gates.
  
-
-## Logic Diagram
 ## Procedure:
 1. Create a New Project:
    - Open Quartus and create a new project by selecting "File" > "New Project Wizard."
@@ -43,16 +42,27 @@ To implement the given logic function verify its operation in Quartus using Veri
 
 ## Program:
 module exp2(A,B,C,D,F1);
+
 input A,B,C,D;
+
 output F1;
+
 wire x1,x2,x3,x4,x5;
+
 assign x1=(~A)&(~B)&(~C)&(~D);
+
 assign x2= A&(~C)&(~D);
+
 assign x3= (~B)&(C)&(~D);
+
 assign x4= (~A)&(B)&(C)&(D);
+
 assign x5=(B)&(~C)&(D);
+
 assign F1=x1|x2|x3|x4|x5;
+
 endmodule
+
 ## RTL realization:
 ![image](https://github.com/Srikaran077/Experiment--02-Implementation-of-combinational-logic-/assets/151993143/89c4dc7e-83b8-4b5a-8ec1-29c0df1573d6)
 
@@ -60,8 +70,7 @@ endmodule
 ## truth table:
 ![image](https://github.com/Srikaran077/Experiment--02-Implementation-of-combinational-logic-/assets/151993143/43e97a36-3778-4694-ba0d-8f009a9126d8)
 
-## Output:
-## RTL
+
 ## Timing Diagram:
 
 ![image](https://github.com/Srikaran077/Experiment--02-Implementation-of-combinational-logic-/assets/151993143/15ff08b3-007a-4273-a46f-27752acf77e3)
